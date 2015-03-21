@@ -1,8 +1,9 @@
 
 // include the library code:
-#include <LiquidCrystal.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 // initialize the library with the numbers of the interface pins
-LiquidCrystal lcd(8, 9, 10, 45, 43, 41,39,37,35,33,31);
+LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 int potPin = 0; //定義類比介面0 連接LM35 溫度感測器
 void setup()

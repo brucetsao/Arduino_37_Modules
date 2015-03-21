@@ -18,7 +18,7 @@ pinMode(LedPin,OUTPUT);//設置數位IO腳模式，OUTPUT為Output
  // set up the LCD's number of columns and rows: 
   lcd.begin(16, 2);
   // Print a message to the LCD.
-  lcd.print("Button Test");
+  lcd.print("Big Button Test");
 }
 void loop() {
   int val ;
@@ -33,13 +33,13 @@ void loop() {
     if (val ==0)
     {
            lcd.setCursor(0, 1);
-          lcd.print("Button Pressed");
+          lcd.print("Big Button Pressed   ");
            digitalWrite(LedPin,HIGH)  ; 
     }
     else
     {
            lcd.setCursor(0, 1);
-          lcd.print("Ready        ");
+          lcd.print("Ready          ");
            digitalWrite(LedPin,LOW)  ; 
       }
  

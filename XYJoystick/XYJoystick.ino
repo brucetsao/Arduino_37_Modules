@@ -1,11 +1,12 @@
-#include <LiquidCrystal.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 #define ZPin 7
 #define LedPin1 6
 #define LedPin2 5
 #define XPin A0
 #define YPin A1
 
- LiquidCrystal lcd(8, 9, 10, 45, 43, 41,39,37,35,33,31);
+LiquidCrystal_I2C lcd(0x27, 16, 2); // set the LCD address to 0x27 for a 16 chars and 2 line display
  
    int val1 = 0 ;
    int val2 = 0 ;
